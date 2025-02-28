@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullscreen PNG Background with Box</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Background PNG fullscreen */
+        body, html {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background: url('093127412.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Kotak putih dengan border */
+        .box {
+            width: 800%; /* Lebar kotak */
+            max-width: 370px; /* Maksimal lebar */
+            padding: 130px;
+            background: white; /* Warna putih */
+            border: 3px solid rgb(255, 255, 255); /* Border hitam */
+            border-radius: 10px; /* Sudut sedikit membulat */
+            text-align: center;
+            color: black; /* Warna teks hitam */
+            position: absolute;
+            top: 84%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .login-btn {
+    position: absolute;
+    top: 150px;  /* Geser ke bawah dari atas */
+    right: 8px; /* Geser ke kiri dari kanan */
+    padding: 15px 150px;
+    font-size: 18px;
+    color: white;
+    background: #2984f1;
+    border: 3px solid white; /* Border putih */
+    border-radius: 50px; /* Sudut membulat */
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-btn:active {
+    background: #2984f1 !important; /* Tetap biru saat diklik */
+    color: white !important; /* Tetap putih saat diklik */
+    border: 3px solid white;
+}
+
+
+        .money {
+            position: absolute;
+            top: 11px;
+            right: 282px;
+            width: 90px; /* Ukuran kecil */
+            height: auto;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .pick {
+            position: absolute;
+            top: 6px;
+            right: 204px;
+            width: 100px; /* Ukuran kecil */
+            height: auto;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .qr {
+            position: absolute;
+            top: 11px;
+            right: 135px;
+            width: 90px; /* Ukuran kecil */
+            height: auto;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .qrtf {
+            position: absolute;
+            top: 12px;
+            right: 61px;
+            width: 95px; /* Ukuran kecil */
+            height: auto;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .play {
+            position: absolute;
+            top: 11px;
+            right: -15px;
+            width: 103px; /* Ukuran kecil */
+            height: auto;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .call {
+            position: absolute;
+            top: -440px;
+            right: 10px;
+            width: 35px; /* Ukuran kecil */
+            height: auto;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .tap-text5 {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            position: absolute;
+            top: 95px; /* Posisi di bawah play.png */
+            right: -14px;
+            font-size: 10px;
+            color: rgb(86, 86, 86);
+            text-align: center;
+            width: 100px;
+        }
+        .tap-text4 {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            position: absolute;
+            top: 95px; /* Posisi di bawah play.png */
+            right: 59px;
+            font-size: 10px;
+            color: rgb(86, 86, 86);
+            text-align: center;
+            width: 100px;
+        }
+        .tap-text41 {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            position: absolute;
+            top: 106px; /* Posisi di bawah play.png */
+            right: 58px;
+            font-size: 10px;
+            color: rgb(86, 86, 86);
+            text-align: center;
+            width: 100px;
+        }
+        .tap-text3 {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            position: absolute;
+            top: 95px; /* Posisi di bawah play.png */
+            right: 131px;
+            font-size: 10px;
+            color: rgb(86, 86, 86);
+            text-align: center;
+            width: 100px;
+        }
+        .tap-text2 {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            position: absolute;
+            top: 95px; /* Posisi di bawah play.png */
+            right: 203px;
+            font-size: 10px;
+            color: rgb(86, 86, 86);
+            text-align: center;
+            width: 100px;
+        }
+        .tap-text1 {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            position: absolute;
+            top: 95px; /* Posisi di bawah play.png */
+            right: 278px;
+            font-size: 10px;
+            color: rgb(86, 86, 86);
+            text-align: center;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+ 
+        <button class="login-btn" onclick="pindahPage()">Login</button>
+        <img src="1740761386518.png" alt="Menu" class="call" id="playButton0">
+        <img src="49028343272.png" alt="Menu" class="money" id="playButton1">
+        <div class="tap-text1">e-money</div>
+        <img src="91424721402.png" alt="Menu" class="pick" id="playButton2">
+        <div class="tap-text2">Quick Pick</div>
+        <img src="9084124921.png" alt="Menu" class="qr" id="playButton3">
+        <div class="tap-text3">QR Bayar</div>
+        <img src="12647984142.png" alt="Menu" class="qrtf" id="playButton4">
+        <div class="tap-text4">QR Terima</div>
+        <div class="tap-text41">Transfer</div>
+        <img src="094341624.png" alt="Menu" class="play" id="playButton5">
+        <div class="tap-text5">Tap to Play</div>
+    </div>
+    <script>
+         document.getElementById("playButton0").addEventListener("click", function() {
+            window.location.href = "call.html";
+        });
+         document.getElementById("playButton1").addEventListener("click", function() {
+            window.location.href = "money.html";
+        });
+         document.getElementById("playButton2").addEventListener("click", function() {
+            window.location.href = "pick.html";
+        });
+         document.getElementById("playButton3").addEventListener("click", function() {
+            window.location.href = "bayar.html";  
+        });
+
+        document.getElementById("playButton4").addEventListener("click", function() {
+            window.location.href = "terima.html";  
+        });
+         document.getElementById("playButton5").addEventListener("click", function() {
+            window.location.href = "play.html";
+        });
+     
+   
+
+        function pindahPage() {
+            window.location.href = "dashboard.html";
+        }
+    </script>
+</body>
+</html>
