@@ -101,7 +101,7 @@
             cursor: pointer;
             border-radius: 50%;
         }
-         .call {
+        .call {
     position: absolute;
     top: 10px;  /* Jarak dari atas */
     right: 10px; /* Jarak dari kanan */
@@ -174,10 +174,12 @@
     </style>
 </head>
 <body>
+    <div>
+        <img src="1740761386518.png" alt="Menu" class="call" id="playButton0">
+    </div>
     <div class="box">
  
         <button class="login-btn" onclick="pindahPage()">Login</button>
-        <img src="1740761386518.png" alt="Menu" class="call" id="playButton0">
         <img src="49028343272.png" alt="Menu" class="money" id="playButton1">
         <div class="tap-text1">e-money</div>
         <img src="91424721402.png" alt="Menu" class="pick" id="playButton2">
@@ -190,6 +192,7 @@
         <img src="094341624.png" alt="Menu" class="play" id="playButton5">
         <div class="tap-text5">Tap to Play</div>
     </div>
+   
     <script>
          document.getElementById("playButton0").addEventListener("click", function() {
             window.location.href = "call.html";
